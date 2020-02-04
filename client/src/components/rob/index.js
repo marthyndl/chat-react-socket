@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from "react-router-dom";
 import MessagesFinal from '../messages';
-import './index.css';
+import './index.scss';
 
 const Rob = ({ messages, writeMessage, handleSubmit }) => {
     return(
@@ -10,7 +10,7 @@ const Rob = ({ messages, writeMessage, handleSubmit }) => {
           <div className="title">
             <h1>Chat Messages</h1>
           </div>
-          
+
           <div className="boxes">
             <div className="robBox">            
               <h1>Rob Chat Box</h1>

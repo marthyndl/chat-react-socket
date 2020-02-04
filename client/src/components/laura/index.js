@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from "react-router-dom";
 import MessagesFinal from '../messages';
-import './index.css';
+import './index.scss';
 
 const Laura = ({ messages, writeMessage, handleSubmit }) => {
     return(
