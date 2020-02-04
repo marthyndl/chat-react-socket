@@ -36,6 +36,13 @@ html, body{
     background-color: rgb(167, 80, 152);
     margin: 1% 1%;
     text-align: center;
+    input {
+      width: 90%;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
   }
   .robBox{
     height: 100%;
@@ -43,6 +50,13 @@ html, body{
     background-color: rgb(86, 80, 167);
     margin: 1% 1%;
     text-align: center;
+    input {
+      width: 90%;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
   }
   .italic {
     font-style: italic;

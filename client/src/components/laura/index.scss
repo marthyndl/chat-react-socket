@@ -32,10 +32,17 @@ html, body{
 
   .lauraBox{
     height: 100%;
-    width: 100%;
+    width: 100% !important;
     background-color: rgb(86, 80, 167);
     margin: 1% 1%;
     text-align: center;
+    input {
+      width: 100%;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
   }
   .italic {
     font-style: italic;
