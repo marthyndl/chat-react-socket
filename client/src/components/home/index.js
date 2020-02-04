@@ -1,23 +1,9 @@
 import React from 'react';
 import { withRouter } from "react-router-dom";
+import MessagesFinal from '../messages';
 import './index.scss';
 
-const Home = ({ messages, writeMessage, handleSubmit }) => {  
-
-  
-
-  
-    const messagesFinal = messages.map((message, index) => {
-      return (
-        <li key={index}>
-          <b  className={(message.from === 'Laura') ? 'italic' : (message.from === 'Rob') ? 'oblique' : '' }>{message.from}: {message.body}
-          <br />
-          <span className="time">Sended by {message.from} at {message.time}</span>
-          </b>
-        </li>
-        );
-    });
-
+const Home = ({ messages, writeMessage, handleSubmit }) => {
     return(
       <div style = {{height:"100vh"}}>
         <div className="contenedor">
@@ -51,7 +37,9 @@ const Home = ({ messages, writeMessage, handleSubmit }) => {
           </div>
           
           <span>{writeMessage}</span>
-          <p>{messagesFinal}</p>
+          <p>
+            <MessagesFinal messages={messages} />
+          </p>
         </div>
       </div>
     )

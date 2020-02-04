@@ -1,27 +1,18 @@
 import React from 'react';
 import { withRouter } from "react-router-dom";
+import MessagesFinal from '../messages';
 import './index.css';
 
 const Rob = ({ messages, writeMessage, handleSubmit }) => {
-    const messagesFinal = messages.map((message, index) => {
-      return (
-        <li key={index}>
-          <b  className={(message.from === 'Laura') ? 'italic' : 'oblique' }>{message.from}: {message.body}
-          <br />
-          <span className="time">Sended by {message.from} at {message.time}</span>
-          </b>
-        </li>
-        );
-    });
     return(
       <div style = {{height:"100vh"}}>
         <div className="contenedor">
           <div className="title">
             <h1>Chat Messages</h1>
           </div>
+          
           <div className="boxes">
-            <div className="robBox">
-            
+            <div className="robBox">            
               <h1>Rob Chat Box</h1>
               <input
                   type="text"
@@ -37,7 +28,9 @@ const Rob = ({ messages, writeMessage, handleSubmit }) => {
           </div>
           
           <span>{writeMessage}</span>
-          <p>{messagesFinal}</p>
+          <p>
+            <MessagesFinal messages={messages} />
+          </p>
         </div>
       </div>
     )
