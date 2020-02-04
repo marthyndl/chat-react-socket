@@ -1,15 +1,14 @@
 import React from 'react';
 import { withRouter } from "react-router-dom";
 import MessagesFinal from '../messages';
+import Header from '../header';
 import './index.scss';
 
 const Rob = ({ messages, writeMessage, handleSubmit }) => {
     return(
       <div style = {{height:"100vh"}}>
         <div className="contenedor">
-          <div className="title">
-            <h1>Chat Messages</h1>
-          </div>
+          <Header />
 
           <div className="boxes">
             <div className="robBox">            
@@ -17,7 +16,8 @@ const Rob = ({ messages, writeMessage, handleSubmit }) => {
               <input
                   type="text"
                   placeholder='Enter a message'
-                  onKeyUp={(event) => handleSubmit(event, false)}/>
+                  onKeyUp={(event) => handleSubmit(event, false)}
+                />
             </div>
           </div>
         </div>

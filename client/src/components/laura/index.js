@@ -1,15 +1,14 @@
 import React from 'react';
 import { withRouter } from "react-router-dom";
 import MessagesFinal from '../messages';
+import Header from '../header';
 import './index.scss';
 
 const Laura = ({ messages, writeMessage, handleSubmit }) => {
     return(
       <div style = {{height:"100vh"}}>
         <div className="contenedor">
-          <div className="title">
-            <h1>Chat Messages</h1>
-          </div>
+          <Header />
           <div className="boxes">
             <div className="lauraBox">
               
@@ -17,7 +16,8 @@ const Laura = ({ messages, writeMessage, handleSubmit }) => {
               <input
                   type="text"
                   placeholder='Enter a message'
-                  onKeyUp={(event) => handleSubmit(event, true)}/>
+                  onKeyUp={(event) => handleSubmit(event, true)}
+              />
             </div>
           </div>
         </div>
